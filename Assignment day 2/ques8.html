@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components in React</title>
+  <style>
+    .getting-started {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.highlight {
+  color: #36c48d; /* Match the green color used in the image */
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #36c48d;
+  margin-bottom: 10px;
+}
+
+.instructions {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.highlight-instruction {
+  color: #36c48d;
+  font-weight: bold;
+}
+
+.code-text {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+const GettingStarted = () => {
+  return (
+    <div className="getting-started">
+      <h2>Getting started in <span className="highlight">3 easy steps</span></h2>
+      <div className="steps-container">
+        <div className="step">
+          <div className="step-number">01</div>
+          <h3>Find your template</h3>
+          <p>Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.</p>
+        </div>
+        <div className="step">
+          <div className="step-number">02</div>
+          <h3>Copy the code</h3>
+          <p>Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.</p>
+        </div>
+        <div className="step">
+          <div className="step-number">03</div>
+          <h3>Enjoy your free time</h3>
+          <p>You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features.</p>
+        </div>
+      </div>
+     
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<GettingStarted />)
+
+
+    
+  </script>
+</body>
+</html>
